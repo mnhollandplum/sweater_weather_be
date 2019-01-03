@@ -9,7 +9,5 @@ it 'API request is successful' do
     end
 
     expect(response).to be_successful
-
-    forecast = JSON.parse(response.body)
   end
 end
