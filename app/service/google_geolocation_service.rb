@@ -1,4 +1,3 @@
-require 'pry'
 class GoogleGeolocationService
 
   def get_geolocation_coordinates
@@ -19,6 +18,4 @@ class GoogleGeolocationService
   def get_json(url)
     JSON.parse(conn.post(url).body, symbolize_names: true)
   end
-
-  p get_geolocation_coordinates
 end
