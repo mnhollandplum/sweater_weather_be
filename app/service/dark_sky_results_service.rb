@@ -1,6 +1,6 @@
 class DarkSkyResultsService
 
-  def get_results(search_lat, search_lng)
+  def get_forecast(search_lat, search_lng)
     get_json("/forecast/#{ENV['DARK_SKY_API_KEY']}/#{search_lat},#{search_lng}")
   end
 
