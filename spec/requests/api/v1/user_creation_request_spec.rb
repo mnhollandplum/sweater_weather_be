@@ -8,6 +8,6 @@ describe 'User Account Creation' do
                                     password: "password",
                                     password_confirmation: "password"
                                   }
-    expect(response.status).to eq(200)
+    expect(response.status).to eq(201)
   end
 end
