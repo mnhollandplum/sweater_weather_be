@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.giphy.com/v1/gifs/random?api_key=KDShh03cfJsRtblPfbWNzO2xFqPx3r6l&key=KDShh03cfJsRtblPfbWNzO2xFqPx3r6l&q=Cheeseburger
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      X-Ratelimit-Limit-Hour:
+      - '42'
+      X-Ratelimit-Remaining-Hour:
+      - '41'
+      X-Ratelimit-Limit-Day:
+      - '1000'
+      X-Ratelimit-Remaining-Day:
+      - '999'
+      X-Robots-Tag:
+      - noindex
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Accept, x-requested-with, cache-control
+      Access-Control-Allow-Origin:
+      - "*"
+      Accept-Ranges:
+      - bytes
+      - bytes
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 04 Jan 2019 17:15:04 GMT
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-iad2131-IAD, cache-ord1745-ORD
+      X-Cache-Hits:
+      - 0, 0
+      X-Timer:
+      - S1546622105.732272,VS0,VE115
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"type":"gif","id":"l4Ep3FAnifzKFYLFC","slug":"splat-nicksplat-doug-l4Ep3FAnifzKFYLFC","url":"https:\/\/giphy.com\/gifs\/splat-nicksplat-doug-l4Ep3FAnifzKFYLFC","bitly_gif_url":"https:\/\/gph.is\/2zaFeaH","bitly_url":"https:\/\/gph.is\/2zaFeaH","embed_url":"https:\/\/giphy.com\/embed\/l4Ep3FAnifzKFYLFC","username":"nicksplat","source":"nicksplat.com","content_url":"","source_tld":"","source_post_url":"nicksplat.com","is_sticker":0,"import_datetime":"2017-11-03
+        14:14:22","trending_datetime":"0000-00-00 00:00:00","user":{"avatar_url":"https:\/\/media0.giphy.com\/avatars\/nicksplat\/HZP0C4lnqnnB.jpg","banner_url":"https:\/\/media0.giphy.com\/headers\/nicksplat\/RO63bVtkycy6.jpg","banner_image":"https:\/\/media0.giphy.com\/headers\/nicksplat\/RO63bVtkycy6.jpg","profile_url":"https:\/\/giphy.com\/nicksplat\/","username":"nicksplat","display_name":"NickSplat","is_verified":true},"images":{"fixed_height_still":{"url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/200_s.gif","width":"266","height":"200","size":"33369"},"original_still":{"url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/giphy_s.gif","width":"480","height":"360","size":"87956"},"fixed_width":{"url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/200w.gif","width":"200","height":"150","size":"844637","mp4":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/200w.mp4","mp4_size":"114990","webp":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/200w.webp","webp_size":"503096"},"fixed_height_small_still":{"url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/100_s.gif","width":"133","height":"100","size":"10452"},"fixed_height_downsampled":{"url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/200_d.gif","width":"266","height":"200","size":"197828","webp":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/200_d.webp","webp_size":"72364"},"preview":{"width":"346","height":"260","mp4":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/giphy-preview.mp4","mp4_size":"23474"},"fixed_height_small":{"url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/100.gif","width":"133","height":"100","size":"376684","mp4":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/100.mp4","mp4_size":"56808","webp":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/100.webp","webp_size":"262748"},"downsized_still":{"url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/giphy-downsized_s.gif","width":"250","height":"187","size":"29969"},"downsized":{"url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/giphy-downsized.gif","width":"250","height":"187","size":"1070880"},"downsized_large":{"url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/giphy.gif","width":"480","height":"360","size":"4335923"},"fixed_width_small_still":{"url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/100w_s.gif","width":"100","height":"75","size":"6881"},"preview_webp":{"url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/giphy-preview.webp","width":"148","height":"111","size":"49538"},"fixed_width_still":{"url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/200w_s.gif","width":"200","height":"150","size":"20748"},"fixed_width_small":{"url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/100w.gif","width":"100","height":"75","size":"219987","mp4":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/100w.mp4","mp4_size":"33319","webp":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/100w.webp","webp_size":"172784"},"downsized_small":{"width":"344","height":"258","mp4":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/giphy-downsized-small.mp4","mp4_size":"116472"},"fixed_width_downsampled":{"url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/200w_d.gif","width":"200","height":"150","size":"119626","webp":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/200w_d.webp","webp_size":"49510"},"downsized_medium":{"url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/giphy.gif","width":"480","height":"360","size":"4335923"},"original":{"url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/giphy.gif","width":"480","height":"360","size":"4335923","frames":"62","mp4":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/giphy.mp4","mp4_size":"388599","webp":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/giphy.webp","webp_size":"1618008","hash":"461ae1a64b814cbfb5de3cc786173b53"},"fixed_height":{"url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/200.gif","width":"266","height":"200","size":"1453926","mp4":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/200.mp4","mp4_size":"174345","webp":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/200.webp","webp_size":"728772"},"looping":{"mp4":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/giphy-loop.mp4","mp4_size":"1332068"},"original_mp4":{"width":"480","height":"360","mp4":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/giphy.mp4","mp4_size":"388599"},"preview_gif":{"url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/giphy-preview.gif","width":"133","height":"100","size":"49368"},"480w_still":{"url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/480w_s.jpg","width":"480","height":"360"}},"title":"nicksplat
+        doug GIF","image_original_url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/giphy.gif","image_url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/giphy.gif","image_mp4_url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/giphy.mp4","image_frames":"62","image_width":"480","image_height":"360","fixed_height_downsampled_url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/200_d.gif","fixed_height_downsampled_width":"266","fixed_height_downsampled_height":"200","fixed_width_downsampled_url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/200w_d.gif","fixed_width_downsampled_width":"200","fixed_width_downsampled_height":"150","fixed_height_small_url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/100.gif","fixed_height_small_still_url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/100_s.gif","fixed_height_small_width":"133","fixed_height_small_height":"100","fixed_width_small_url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/100w.gif","fixed_width_small_still_url":"https:\/\/media0.giphy.com\/media\/l4Ep3FAnifzKFYLFC\/100w_s.gif","fixed_width_small_width":"100","fixed_width_small_height":"75","caption":""},"meta":{"status":200,"msg":"OK","response_id":"5c2f94986a2e43384d31f6a0"}}'
+    http_version: 
+  recorded_at: Fri, 04 Jan 2019 17:15:04 GMT
+recorded_with: VCR 4.0.0

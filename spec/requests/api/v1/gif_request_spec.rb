@@ -8,8 +8,10 @@ describe 'internal gif api' do
       get "/api/v1/gifs?location=denver,co"
     end
     expect(response).to be_successful
-    daily_summary = JSON.parse(response.body, symbolize_names: true)
+    daily_summary =
+    JSON.parse(response.body, symbolize_names: true)
     expect(daily_summary).to be_an_instance_of(Hash)
+    expect(daily_summary).to eq(' ')
 
 #     {
 #   data: {
