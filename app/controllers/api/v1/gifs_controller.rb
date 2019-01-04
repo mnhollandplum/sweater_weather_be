@@ -10,9 +10,27 @@ class Api::V1::GifsController < ApplicationController
      render json: {
        data: {
          daily_forecasts: [
-                            { time: daily_forecast[:data][0][:time]
+                            { time: daily_forecast[:data][0][:time],
+                              summary: daily_forecast[:data][0][:summary],
                               # url: gifs[:data][:url]
-                              }
+                            },
+                            { time: daily_forecast[:data][1][:time],
+                              summary: daily_forecast[:data][1][:summary],
+                              # url: gifs[:data][:url]
+                            },
+                            { time: daily_forecast[:data][2][:time],
+                              summary: daily_forecast[:data][2][:summary],
+                              # url: gifs[:data][:url]
+                            },
+                            { time: daily_forecast[:data][3][:time],
+                              summary: daily_forecast[:data][3][:summary],
+                              # url: gifs[:data][:url]
+                            },
+                            { time: daily_forecast[:data][4][:time],
+                              summary: daily_forecast[:data][4][:summary],
+                              # url: gifs[:data][:url]
+                            }
+
                           ]
               }
                   }
