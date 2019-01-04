@@ -11,7 +11,11 @@ describe 'internal gif api' do
     daily_summary =
     JSON.parse(response.body, symbolize_names: true)
     expect(daily_summary).to be_an_instance_of(Hash)
-    expect(daily_summary).to eq(' ')
+    expect(daily_summary).to have_key(:time)
+    expect(daily_summary).to have_key(:summary)
+    expect(daily_summary).to have_key(:url)
+
+
 
 #     {
 #   data: {
