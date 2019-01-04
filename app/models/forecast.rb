@@ -5,11 +5,11 @@ class Forecast
   end
 
   def daily_forecast
-    forecast_service[get_forecast(@lat, @lng)[:daily]]
+    forecast_service.get_forecast(@lat, @lng)[:daily]
   end
-  
+
 
   def forecast_service
-    DarkSkyResultsService.new(@lat, @lng)
+    DarkSkyResultsService.new
   end
 end

@@ -4,10 +4,7 @@ class Api::V1::GifsController < ApplicationController
      coordinates = GoogleGeolocationService.new.get_coordinates('denver,co')
      lat = coordinates[:lat]
      lng = coordinates[:lng]
-     daily_forecast = Forecast.new(lat, lng)
-     binding.pry
-     daily_forecast_summary = daily_forecast[:summary]
-     gifs = GiphyResultsService.new.get_gifs(daily_forecast_summary.tr('°', ''))
+     daily_forecast = Forecast.new(lat, lng).daily_forecast
 
      render json: {
        data: {
