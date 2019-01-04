@@ -8,9 +8,8 @@ describe 'internal gif api' do
       get "/api/v1/gifs?location=denver,co"
     end
     expect(response).to be_successful
-    binding.pry
-    gifs = JSON.parse(response.body, symbolize_names: true)
-    # expect(forecast).to be_an_instance_of(Hash)
+    daily_summary = JSON.parse(response.body, symbolize_names: true)
+    expect(daily_summary).to be_an_instance_of(Hash)
 
 #     {
 #   data: {
