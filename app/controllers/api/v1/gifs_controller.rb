@@ -6,8 +6,7 @@ class Api::V1::GifsController < ApplicationController
      lng = coordinates[:lng]
      forecast = DarkSkyResultsService.new.get_forecast(lat, lng)
      gifs = GiphyResultsService.new.get_gifs(forecast[:daily][:summary][0])
-     render json: gifs[:data].sample[0]
-  
+     render json: gifs[:data]
   end
 
 end

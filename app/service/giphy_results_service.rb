@@ -1,7 +1,7 @@
 class GiphyResultsService
 
   def get_gifs(search)
-    get_json("/v1/gifs/search?api_key=#{ENV['GIPHY_API_KEY']}&q=#{search}")
+    get_json("/v1/gifs/random?api_key=#{ENV['GIPHY_API_KEY']}&q=#{search}")
   end
 
   private
