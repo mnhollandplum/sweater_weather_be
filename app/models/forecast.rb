@@ -12,4 +12,6 @@ class Forecast
   def forecast_service
     DarkSkyResultsService.new
   end
+
+
 end

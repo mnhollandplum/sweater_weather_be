@@ -3,7 +3,10 @@ class Gif
     @keywords = keywords
   end
 
-  def service
-    GiphyResultsService.new(@keywords)
+  def find_gifs
+  end
+
+  def gif_service
+    GiphyResultsService.new
   end
 end
