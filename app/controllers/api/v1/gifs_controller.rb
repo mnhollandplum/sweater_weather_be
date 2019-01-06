@@ -12,11 +12,11 @@ class Api::V1::GifsController < ApplicationController
      render json: {
        data: {
          daily_forecasts: [
-                            DailyWeather.new(daily_forecast[:data][0][:time], daily_forecast[:data][0][:summary], GiphyResultsService.new.get_gifs(summaries[0]).gif_serv).to_json,
+                            DailyWeather.new(daily_forecast[:data][0][:time], daily_forecast[:data][0][:summary], GiphyResultsService.new.get_gifs(summaries[0])[:data][:url]).to_json,
 
                             DailyWeather.new(daily_forecast[:data][1][:time], daily_forecast[:data][1][:summary], GiphyResultsService.new.get_gifs(summaries[1])).to_json,
 
-                            DailyWeather.new(daily_forecast[:data][2][:time], daily_forecast[:data][2][:summary], GiphyResultsService.new.get_gifs(summaries[2])).to_json,
+                            DailyWeather.new(daily_forecast[:data][2][:time], daily_forecast[:data][2][:summary], GiphyResultsService.new.get_gifs(summaries[2])[:data]).to_json,
 
                             DailyWeather.new(daily_forecast[:data][3][:time], daily_forecast[:data][3][:summary], GiphyResultsService.new.get_gifs(summaries[3])).to_json,
 
