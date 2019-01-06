@@ -3,7 +3,8 @@ class Gif
     @keywords = keywords
   end
 
-  def find_gifs
+  def gif_url
+    gif_service.get_gifs(@keywords)[:data][:url]
   end
 
   def gif_service

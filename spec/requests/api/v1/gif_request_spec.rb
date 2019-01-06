@@ -1,53 +1,14 @@
-require 'rails_helper'
-
-describe 'internal gif api' do
-
-  it 'API request is successful' do
-
-    VCR.use_cassette("giphy service") do
-    end
-
-    VCR.use_cassette("can send gif and summary request") do
+describe 'daily weather with gif' do
+  it 'returns content json from objects' do
+    VCR.use_cassette("returns gif based on weather") do
       get "/api/v1/gifs?location=denver,co"
+
+      expect(response.status).to eq 200
+      result = JSON.parse(response.body, symbolize_names: true)
+      expect(result).to be_an_instance_of(Hash)
+      expect(result.keys).to eq ([:data])
+      expect(result[:data].keys).to eq ([:daily_forecasts])
+      expect(result[:data][:daily_forecasts][0]).to include ("time")
     end
-
-    expect(response).to be_successful
-    daily_summary =
-    JSON.parse(response.body, symbolize_names: true)
-    expect(daily_summary).to be_an_instance_of(Hash)
-
-
-#     {
-#   data: {
-#     daily_forecasts: [
-#       {
-#         time: "1546498800",
-#         summary: "Mostly sunny in the morning.",
-#         url: "<GIPHY_URL_GOES_HERE>"
-#       },
-#       {
-#         time: "1546585200",
-#         summary: "Partly cloudy in the evening.",
-#         url: "<GIPHY_URL_GOES_HERE>"
-#       },
-#       {
-#         time: "1546671600",
-#         summary: "Snowy.",
-#         url: "<GIPHY_URL_GOES_HERE>"
-#       },
-#       {
-#         time: "1546758000",
-#         summary: "Firenado",
-#         url: "<GIPHY_URL_GOES_HERE>"
-#       },
-#       {
-#         time: "1546844400",
-#         summary: "Corgis because I cant think of other weather",
-#         url: "<GIPHY_URL_GOES_HERE>"
-#       }
-#     ]
-#   }
-#   copyright: "2018"
-# }
   end
 end
