@@ -8,6 +8,10 @@ class Forecast
     forecast_service.get_forecast(@lat, @lng)[:daily]
   end
 
+  def current_weather
+    forecast_service.get_forecast(@lat, @lng)[:current][:summary]
+  end
+
 
   def forecast_service
     DarkSkyResultsService.new
