@@ -5,7 +5,9 @@ RSpec.describe User, type: :model do
     it { should validate_presence_of(:email) }
     it { should validate_presence_of(:password) }
     it { should validate_presence_of(:password_confirmation) }
-
+  end
+  context 'relationships' do
+    it {should have_many :favorites}
   end
     context 'instance methods' do
 
