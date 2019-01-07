@@ -1,7 +1,7 @@
 class Api::V1::GifsController < ApplicationController
 
   def index
-     coordinates = GoogleGeolocationService.new.get_coordinates(params[:location])
+     coordinates = Coordinate.new(params[:location]).coordinates
      lat = coordinates[:lat]
      lng = coordinates[:lng]
      daily_forecast = Forecast.new(lat, lng).daily_forecast
