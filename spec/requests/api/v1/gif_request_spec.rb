@@ -1,6 +1,6 @@
 describe 'daily weather with gif' do
   it 'returns content json from objects' do
-    VCR.use_cassette("returns gif based on weather") do
+    VCR.use_cassette("returns gif based on weather", :record => :new_episodes) do
       get "/api/v1/gifs?location=denver,co"
 
       expect(response.status).to eq 200
