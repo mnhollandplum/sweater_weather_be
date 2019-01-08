@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       post '/sessions', to: 'sessions#create'
       get '/gifs', to: 'gifs#index'
       post '/favorites', to: 'favorites#create'
-      # get '/favorites', to: 'favorites#index'
+      get '/favorites', to: 'favorites#index'
     end
   end
 end
