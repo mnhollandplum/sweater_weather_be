@@ -20,7 +20,7 @@ class Api::V1::FavoritesController < ApplicationController
     if user.favorites.delete(favorite)
       render json: FavoritesSerializer.new(user.favorites)
     else
-      render json: {errors: "Favorite not found"}, status: 401
+      render json: {message: "Favorite not found"}, status: 401
     end
   end
 
