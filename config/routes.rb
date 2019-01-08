@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       get '/gifs', to: 'gifs#index'
       post '/favorites', to: 'favorites#create'
       get '/favorites', to: 'favorites#index'
+      delete '/favorites', to: 'favorites#destroy'
     end
   end
 end

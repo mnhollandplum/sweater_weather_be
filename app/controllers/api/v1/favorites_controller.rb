@@ -14,6 +14,16 @@ class Api::V1::FavoritesController < ApplicationController
     render json: FavoritesSerializer.new(user.favorites), status: 200
   end
 
+  def destroy
+    user = User.find_by(api_key: favorite_params[:api_key])
+    favorite = Favorite.find_by(user_id: user.id, location: favorite_params[:location].downcase)
+    if user.favorites.delete(favorite)
+      render json: FavoritesSerializer.new(user.favorites)
+    else
+      render json: {errors: "Favorite not found"}, status: 401
+    end
+  end
+
 private
 
   def favorite_params
