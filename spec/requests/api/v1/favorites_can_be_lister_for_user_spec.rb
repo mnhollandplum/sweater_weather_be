@@ -11,11 +11,10 @@ describe 'User List of Favorites Locations' do
     get "/api/v1/favorites?api_key=#{user.api_key}"
 
     favorite_json= JSON.parse(response.body, symbolize_names: true)
-    binding.pry
     expect(response.status).to eq(200)
     expect(favorite_json).to be_an_instance_of(Hash)
-    expect(favorite_json.keys).to eq ([:location, :current_weather])
-    expect(favorite_json[:location]).to eq ('denver,co')
-    expect(favorite_json[:api_key]).to eq ("#{user.api_key}")
+    expect(favorite_json.keys).to eq([:data])
+    expect(favorite_json[:data].count).to eq(2)
+    expect(favorite_json[:data][0][:attributes].keys).to eq([:location, :current_weather])
   end
 end
