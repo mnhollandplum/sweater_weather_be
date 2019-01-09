@@ -42,7 +42,6 @@ group :development, :test do
   gem 'vcr'
   gem 'webmock'
   gem "spring"
-  gem 'pry'
   gem 'simplecov'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
