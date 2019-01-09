@@ -21,8 +21,9 @@ class Api::V1::GifsController < ApplicationController
                             DailyWeather.new(daily_forecast[:data][3][:time], daily_forecast[:data][3][:summary], Gif.new(summaries[3]).gif_url, "Copyright 2018").to_json,
 
                             DailyWeather.new(daily_forecast[:data][4][:time], daily_forecast[:data][4][:summary], Gif.new(summaries[4]).gif_url, "Copyright 2018").to_json
-                          ]
+                          ]  
               }
+
                   }
   end
 

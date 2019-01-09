@@ -21,12 +21,14 @@ class Api::V1::FavoritesController < ApplicationController
   end
 
   def destroy
-    user = User.find_by(api_key: favorite_params[:api_key])
+    user = User.find_by(api_key:
+    favorite_params[:api_key])
     favorite = Favorite.find_by(user_id: user.id, location: favorite_params[:location].downcase)
-    if user.favorites.delete(favorite)
-      render json: FavoritesSerializer.new(user.favorites)
+    if favorite
+     user.favorites.delete(favorite)
+      render json: {message: "Favorite deleted"}, status: 204
     else
-      render json: {message: "Favorite not found"}, status: 401
+      render json: {message: "No Favorite Location named #{favorite_params[:location]} exists "}, status: 401
     end
   end
 
