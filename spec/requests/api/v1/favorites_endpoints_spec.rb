@@ -35,7 +35,7 @@ describe 'User List of Favorites Locations' do
     expect(favorite_json).to be_an_instance_of(Hash)
     expect(favorite_json.keys).to eq([:data])
     expect(favorite_json[:data].count).to eq(2)
-    expect(favorite_json[:data][0][:attributes].keys).to eq([:location, :current_weather])
+    expect(favorite_json[:data][0][:attributes].keys).to eq([:location, :current_weather_summary])
   end
 
   it 'user cannot see a list of favorites without a existing api key' do

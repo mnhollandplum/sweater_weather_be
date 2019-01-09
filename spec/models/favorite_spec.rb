@@ -10,7 +10,7 @@ require 'rails_helper'
       user = User.create(email: "user@test.com", password: "1234", password_confirmation: "1234")
       favorite = Favorite.create(user_id: user.id, location: 'denver,co')
 
-      expect(favorite.current_weather).to be_an_instance_of(String)
+      expect(favorite.current_weather_summary).to be_an_instance_of(String)
 
     end
   end

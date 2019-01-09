@@ -8,7 +8,7 @@ class Forecast
     forecast_service.get_forecast(@lat, @lng)[:daily]
   end
 
-  def current_weather
+  def current_weather_summary
     forecast_service.get_forecast(@lat, @lng)[:currently][:summary]
   end
 
