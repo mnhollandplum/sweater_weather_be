@@ -27,8 +27,10 @@ class Api::V1::FavoritesController < ApplicationController
     if favorite
      user.favorites.delete(favorite)
       render json: {message: "Favorite deleted"}, status: 204
+    elsif !user
+      render json: {message: "Not Authorized"}, status: 401
     else
-      render json: {message: "No Favorite Location named #{favorite_params[:location]} exists "}, status: 401
+      render json: {message: "No Favorite Location named #{favorite_params[:location]} exists "}, status: 204
     end
   end
 
