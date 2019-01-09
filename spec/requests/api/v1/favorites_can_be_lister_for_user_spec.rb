@@ -27,8 +27,8 @@ describe 'User List of Favorites Locations' do
     expect(user.favorites.count).to eq(2)
 
     delete "/api/v1/favorites?location=Denver,+CO&api_key=#{user.api_key}"
-    #
-    # expect(response).to be_successful
-    # expect(user.cities.count).to eq(1)
+
+    expect(response).to be_successful
+    expect(user.favorites.count).to eq(1)
   end
 end
