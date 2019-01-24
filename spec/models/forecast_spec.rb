@@ -17,8 +17,13 @@ RSpec.describe Forecast, type: :model do
       expect(@forecast.daily_forecast).to be_an_instance_of(Hash)
       expect(@forecast.daily_forecast.keys).to eq([:summary, :icon, :data])
     end
-    it 'can get current weather summary' do
-      expect(@forecast.current_weather_summary).to be_an_instance_of(String)
+    it 'can get hourly forecast' do
+      expect(@forecast.hourly_forecast).to be_an_instance_of(Hash)
+      expect(@forecast.hourly_forecast.keys).to eq([:summary, :icon, :data])
+    end
+    it 'can get current weather' do
+      expect(@forecast.current_weather).to be_an_instance_of(Hash)
+      expect(@forecast.current_weather[:summary]).to be_an_instance_of(String)
     end
   end
 end

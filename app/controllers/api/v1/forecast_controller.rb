@@ -4,10 +4,10 @@ class Api::V1::ForecastController < ApplicationController
      coordinates = Coordinate.new(params[:location]).coordinates
      lat = coordinates[:lat]
      lng = coordinates[:lng]
-     forecast = Forecast.new(lat,lng)
+     forecast = Forecast.new(lat,lng).forecast
+
      render json: forecast
+
   end
-
-
 
 end
